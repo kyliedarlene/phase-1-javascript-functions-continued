@@ -12,3 +12,17 @@ function mondayWork(activity) {
     }
     return `This Monday, I will ${activity}.`
 }
+
+function wrapAdjective(flair) {
+    if (flair === undefined) {
+        flair = "*";
+    }
+    return (function(param){
+        if (param === undefined) {
+            param = "special";
+        }
+        return `You are ${flair}${param}${flair}!`
+    })
+}
+
+console.log(wrapAdjective("&&&")("batman"));
